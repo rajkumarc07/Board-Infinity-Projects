@@ -1,0 +1,42 @@
+[training@localhost ~]$ hive
+Logging initialized using configuration in file:/etc/hive/conf.dist/hive-log4j.properties
+Hive history file=/tmp/training/hive_job_log_training_202307211306_1741438813.txt
+hive> select*from rajkumarclickstreamcsv;
+OK
+0	null	page
+1	2023-01-01 10:00:00.0	homepage
+1	2023-01-01 10:01:00.0	product_page
+2	2023-01-01 10:02:00.0	homepage
+2	2023-01-01 10:03:00.0	cart_page
+3	2023-01-01 10:05:00.0	homepage
+3	2023-01-01 10:06:00.0	product_page
+3	2023-01-01 10:07:00.0	cart_page
+4	2023-01-01 10:09:00.0	homepage
+4	2023-01-01 10:10:00.0	product_page
+4	2023-01-01 10:11:00.0	cart_page
+4	2023-01-01 10:12:00.0	checkout_page
+5	2023-01-01 10:15:00.0	homepage
+5	2023-01-01 10:16:00.0	product_page
+NULL	NULL	NULL
+Time taken: 16.623 seconds
+hive> select*from rajkumarcustomercsv;   
+OK
+0	n	email
+1	J	john.doe@example.com
+2	J	jane.smith@example.com
+3	R	robert.johnson@example.com
+4	L	lisa.brown@example.com
+5	M	michael.wilson@example.com
+NULL	NULL	NULL
+Time taken: 0.12 seconds
+hive> select*from rajkumarpurchasecsv;
+OK
+0	null	amount
+1	2023-01-01 10:05:00.0	100
+2	2023-01-01 10:08:00.0	150
+3	2023-01-01 10:09:00.0	200
+4	2023-01-01 10:13:00.0	120
+5	2023-01-01 10:17:00.0	80
+NULL	NULL	NULL
+Time taken: 0.166 seconds
+hive> 

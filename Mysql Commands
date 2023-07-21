@@ -1,0 +1,106 @@
+[training@localhost ~]$ mysql --user=training --password=training
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 10
+Server version: 5.1.66 Source distribution
+
+Copyright (c) 2000, 2012, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use mydatabase;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> create table rajkumarclickstreamcsv (userID int, timestamp DATETIME, page char(30));
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> create table rajkumarcustomercsv (userID int, name char, email char(30));
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> create table rajkumarpurchasecsv (userID int, timestamp DATETIME, amount char(30));
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> LOAD DATA LOCAL INFILE '/home/training/Downloads/Rajclickstream_data.csv' INTO TABLE rajkumarclickstreamcsv 
+    -> FIELDS TERMINATED BY ','
+    -> LINES TERMINATED BY '\r\n';
+Query OK, 14 rows affected, 2 warnings (0.01 sec)
+Records: 14  Deleted: 0  Skipped: 0  Warnings: 1
+
+mysql> LOAD DATA LOCAL INFILE '/home/training/Downloads/Rajcustomer_data.csv' INTO TABLE rajkumarcustomercsv
+    -> FIELDS TERMINATED BY ','
+    -> LINES TERMINATED BY '\r\n';
+Query OK, 6 rows affected, 7 warnings (0.00 sec)
+Records: 6  Deleted: 0  Skipped: 0  Warnings: 6
+
+mysql> LOAD DATA LOCAL INFILE '/home/training/Downloads/Rajpurchase_data.csv' INTO TABLE rajkumarpurchasecsv
+    -> FIELDS TERMONATED BY ','
+    -> FIELDS TERMINATED BY ','
+    -> LINES TERMINATED BY '\r\n';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'TERMONATED BY ','
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\r\n'' at line 2
+mysql> LOAD DATA LOCAL INFILE '/home/training/Downloads/Rajpurchase_data.csv' INTO TABLE rajkumarpurchasecsv 
+    -> FIELDS TERMINATED BY ','
+    -> LINES TERMINATED BY '\r\n';
+Query OK, 6 rows affected, 2 warnings (0.00 sec)
+Records: 6  Deleted: 0  Skipped: 0  Warnings: 1
+
+mysql> select*from rajkumarclickstreamcsv;
++--------+---------------------+---------------+
+| userID | timestamp           | page          |
++--------+---------------------+---------------+
+|      0 | 0000-00-00 00:00:00 | page          |
+|      1 | 2023-01-01 10:00:00 | homepage      |
+|      1 | 2023-01-01 10:01:00 | product_page  |
+|      2 | 2023-01-01 10:02:00 | homepage      |
+|      2 | 2023-01-01 10:03:00 | cart_page     |
+|      3 | 2023-01-01 10:05:00 | homepage      |
+|      3 | 2023-01-01 10:06:00 | product_page  |
+|      3 | 2023-01-01 10:07:00 | cart_page     |
+|      4 | 2023-01-01 10:09:00 | homepage      |
+|      4 | 2023-01-01 10:10:00 | product_page  |
+|      4 | 2023-01-01 10:11:00 | cart_page     |
+|      4 | 2023-01-01 10:12:00 | checkout_page |
+|      5 | 2023-01-01 10:15:00 | homepage      |
+|      5 | 2023-01-01 10:16:00 | product_page
+ |
++--------+---------------------+---------------+
+14 rows in set (0.00 sec)
+
+mysql> select*from rajkumarcustomercsv
+    -> select*from rajkumarcustomercsv;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'select*from rajkumarcustomercsv' at line 2
+mysql> select*from rajkumarcustomercsv;
++--------+------+-----------------------------+
+| userID | name | email                       |
++--------+------+-----------------------------+
+|      0 | n    | email                       |
+|      1 | J    | john.doe@example.com        |
+|      2 | J    | jane.smith@example.com      |
+|      3 | R    | robert.johnson@example.com  |
+|      4 | L    | lisa.brown@example.com      |
+|      5 | M    | michael.wilson@example.com
+ |
++--------+------+-----------------------------+
+6 rows in set (0.00 sec)
+
+mysql> select*from rajkumarpurchasecsv;
++--------+---------------------+--------+
+| userID | timestamp           | amount |
++--------+---------------------+--------+
+|      0 | 0000-00-00 00:00:00 | amount |
+|      1 | 2023-01-01 10:05:00 | 100    |
+|      2 | 2023-01-01 10:08:00 | 150    |
+|      3 | 2023-01-01 10:09:00 | 200    |
+|      4 | 2023-01-01 10:13:00 | 120    |
+|      5 | 2023-01-01 10:17:00 | 80
+    |
++--------+---------------------+--------+
+6 rows in set (0.00 sec)
+
+mysql> 

@@ -1,0 +1,512 @@
+MapReduce Jobs Launched: 
+Job 0: Map: 2  Reduce: 1   Cumulative CPU: 6.64 sec   HDFS Read: 0 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 6 seconds 640 msec
+OK
+0	n	email	amount
+1	J	john.doe@example.com	100
+2	J	jane.smith@example.com	150
+3	R	robert.johnson@example.com	200
+4	L	lisa.brown@example.com	120
+5	M	michael.wilson@example.com	80
+Time taken: 53.449 seconds
+hive> select userID, UPPER(name) from rajkumarcustomercsv;
+Total MapReduce jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks is set to 0 since there's no reduce operator
+Starting Job = job_202307210924_0009, Tracking URL = http://0.0.0.0:50030/jobdetails.jsp?jobid=job_202307210924_0009
+Kill Command = /usr/lib/hadoop/bin/hadoop job  -Dmapred.job.tracker=0.0.0.0:8021 -kill job_202307210924_0009
+Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 0
+2023-07-21 12:06:52,740 Stage-1 map = 0%,  reduce = 0%
+2023-07-21 12:07:08,885 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.97 sec
+2023-07-21 12:07:09,895 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.97 sec
+2023-07-21 12:07:10,903 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.97 sec
+2023-07-21 12:07:11,915 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.97 sec
+2023-07-21 12:07:12,924 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.97 sec
+2023-07-21 12:07:13,944 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.97 sec
+2023-07-21 12:07:14,956 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.97 sec
+2023-07-21 12:07:15,975 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.97 sec
+2023-07-21 12:07:16,987 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.97 sec
+2023-07-21 12:07:18,006 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.97 sec
+2023-07-21 12:07:19,022 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.97 sec
+2023-07-21 12:07:20,030 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.97 sec
+2023-07-21 12:07:21,041 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.97 sec
+2023-07-21 12:07:22,050 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.97 sec
+2023-07-21 12:07:23,061 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.97 sec
+2023-07-21 12:07:24,071 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 1.97 sec
+MapReduce Total cumulative CPU time: 1 seconds 970 msec
+Ended Job = job_202307210924_0009
+MapReduce Jobs Launched: 
+Job 0: Map: 1   Cumulative CPU: 1.97 sec   HDFS Read: 0 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 1 seconds 970 msec
+OK
+0	N
+1	J
+2	J
+3	R
+4	L
+5	M
+NULL	NULL
+Time taken: 37.069 seconds
+hive> select count(*) as rowcount from rajkumarpurchasecsv;
+Total MapReduce jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapred.reduce.tasks=<number>
+Starting Job = job_202307210924_0010, Tracking URL = http://0.0.0.0:50030/jobdetails.jsp?jobid=job_202307210924_0010
+Kill Command = /usr/lib/hadoop/bin/hadoop job  -Dmapred.job.tracker=0.0.0.0:8021 -kill job_202307210924_0010
+Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 1
+2023-07-21 12:08:35,695 Stage-1 map = 0%,  reduce = 0%
+2023-07-21 12:08:51,866 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.46 sec
+2023-07-21 12:08:52,884 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.46 sec
+2023-07-21 12:08:53,901 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.46 sec
+2023-07-21 12:08:54,912 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.46 sec
+2023-07-21 12:08:55,923 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.46 sec
+2023-07-21 12:08:56,935 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.46 sec
+2023-07-21 12:08:57,955 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.46 sec
+2023-07-21 12:08:58,965 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.46 sec
+2023-07-21 12:08:59,976 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.46 sec
+2023-07-21 12:09:00,987 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.46 sec
+2023-07-21 12:09:02,000 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 1.46 sec
+2023-07-21 12:09:03,032 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 1.46 sec
+2023-07-21 12:09:04,043 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 1.46 sec
+2023-07-21 12:09:05,056 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 1.46 sec
+2023-07-21 12:09:06,064 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 1.46 sec
+2023-07-21 12:09:07,074 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.3 sec
+2023-07-21 12:09:08,113 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.3 sec
+2023-07-21 12:09:09,121 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.3 sec
+2023-07-21 12:09:10,129 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.3 sec
+2023-07-21 12:09:11,138 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.3 sec
+2023-07-21 12:09:12,148 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.3 sec
+2023-07-21 12:09:13,160 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.3 sec
+2023-07-21 12:09:14,170 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.3 sec
+2023-07-21 12:09:15,193 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.3 sec
+2023-07-21 12:09:16,204 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.3 sec
+2023-07-21 12:09:17,216 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.3 sec
+2023-07-21 12:09:18,224 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.3 sec
+2023-07-21 12:09:19,236 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.3 sec
+2023-07-21 12:09:20,250 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.3 sec
+2023-07-21 12:09:21,262 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.3 sec
+2023-07-21 12:09:22,276 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.3 sec
+MapReduce Total cumulative CPU time: 4 seconds 300 msec
+Ended Job = job_202307210924_0010
+MapReduce Jobs Launched: 
+Job 0: Map: 1  Reduce: 1   Cumulative CPU: 4.3 sec   HDFS Read: 0 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 4 seconds 300 msec
+OK
+7
+Time taken: 52.636 seconds
+hive> select userID, count(*) from rajkumarclickstreamcsv group by userID having count(userID) > 1;
+Total MapReduce jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks not specified. Estimated from input data size: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapred.reduce.tasks=<number>
+Starting Job = job_202307210924_0011, Tracking URL = http://0.0.0.0:50030/jobdetails.jsp?jobid=job_202307210924_0011
+Kill Command = /usr/lib/hadoop/bin/hadoop job  -Dmapred.job.tracker=0.0.0.0:8021 -kill job_202307210924_0011
+Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 1
+2023-07-21 12:10:55,381 Stage-1 map = 0%,  reduce = 0%
+2023-07-21 12:11:10,521 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.57 sec
+2023-07-21 12:11:11,529 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.57 sec
+2023-07-21 12:11:12,536 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.57 sec
+2023-07-21 12:11:13,544 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.57 sec
+2023-07-21 12:11:14,557 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.57 sec
+2023-07-21 12:11:15,564 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.57 sec
+2023-07-21 12:11:16,575 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.57 sec
+2023-07-21 12:11:17,598 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.57 sec
+2023-07-21 12:11:18,611 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.57 sec
+2023-07-21 12:11:19,622 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.57 sec
+2023-07-21 12:11:20,634 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 1.57 sec
+2023-07-21 12:11:21,642 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 1.57 sec
+2023-07-21 12:11:22,654 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 1.57 sec
+2023-07-21 12:11:23,663 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 1.57 sec
+2023-07-21 12:11:24,673 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 1.57 sec
+2023-07-21 12:11:25,680 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 1.57 sec
+2023-07-21 12:11:26,696 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.5 sec
+2023-07-21 12:11:27,706 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.5 sec
+2023-07-21 12:11:28,727 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.5 sec
+2023-07-21 12:11:29,739 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.5 sec
+2023-07-21 12:11:30,760 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.5 sec
+2023-07-21 12:11:31,777 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.5 sec
+2023-07-21 12:11:32,787 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.5 sec
+2023-07-21 12:11:33,797 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.5 sec
+2023-07-21 12:11:34,810 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.5 sec
+2023-07-21 12:11:35,820 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.5 sec
+2023-07-21 12:11:36,829 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.5 sec
+2023-07-21 12:11:37,841 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.5 sec
+2023-07-21 12:11:38,849 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.5 sec
+2023-07-21 12:11:39,865 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.5 sec
+2023-07-21 12:11:40,874 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.5 sec
+MapReduce Total cumulative CPU time: 4 seconds 500 msec
+Ended Job = job_202307210924_0011
+MapReduce Jobs Launched: 
+Job 0: Map: 1  Reduce: 1   Cumulative CPU: 4.5 sec   HDFS Read: 0 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 4 seconds 500 msec
+OK
+1	2
+2	2
+3	3
+4	4
+5	2
+Time taken: 51.305 seconds
+hive> select c.userID, p.amount from rajkumarcustomercsv c JOIN purchase p on c.userID = p.userID;
+FAILED: SemanticException [Error 10001]: Line 1:58 Table not found 'purchase'
+hive> select c.userID, p.amount from rajkumarcustomercsv c JOIN rajkumarpurchase p on c.userID = p.userID; 
+FAILED: SemanticException [Error 10001]: Line 1:58 Table not found 'rajkumarpurchase'
+hive> select c.userID, p.amount from rajkumarcustomercsv c JOIN rajkumarpurchasecsv  p on c.userID = p.userID;
+Total MapReduce jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks not specified. Estimated from input data size: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapred.reduce.tasks=<number>
+Starting Job = job_202307210924_0012, Tracking URL = http://0.0.0.0:50030/jobdetails.jsp?jobid=job_202307210924_0012
+Kill Command = /usr/lib/hadoop/bin/hadoop job  -Dmapred.job.tracker=0.0.0.0:8021 -kill job_202307210924_0012
+Hadoop job information for Stage-1: number of mappers: 2; number of reducers: 1
+2023-07-21 12:13:42,781 Stage-1 map = 0%,  reduce = 0%
+2023-07-21 12:13:59,970 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 3.6 sec
+2023-07-21 12:14:00,982 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 3.6 sec
+2023-07-21 12:14:01,995 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 3.6 sec
+2023-07-21 12:14:03,007 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 3.6 sec
+2023-07-21 12:14:04,016 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 3.6 sec
+2023-07-21 12:14:05,026 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 3.6 sec
+2023-07-21 12:14:06,034 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 3.6 sec
+2023-07-21 12:14:07,045 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 3.6 sec
+2023-07-21 12:14:08,053 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 3.6 sec
+2023-07-21 12:14:09,063 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 3.6 sec
+2023-07-21 12:14:10,075 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 3.6 sec
+2023-07-21 12:14:11,090 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 3.6 sec
+2023-07-21 12:14:12,100 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 3.6 sec
+2023-07-21 12:14:13,116 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 3.6 sec
+2023-07-21 12:14:14,135 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 3.6 sec
+2023-07-21 12:14:15,145 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 3.6 sec
+2023-07-21 12:14:16,154 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 6.36 sec
+2023-07-21 12:14:17,166 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 6.36 sec
+2023-07-21 12:14:18,184 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 6.36 sec
+2023-07-21 12:14:19,192 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 6.36 sec
+2023-07-21 12:14:20,203 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 6.36 sec
+2023-07-21 12:14:21,214 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 6.36 sec
+2023-07-21 12:14:22,228 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 6.36 sec
+2023-07-21 12:14:23,244 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 6.36 sec
+2023-07-21 12:14:24,254 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 6.36 sec
+2023-07-21 12:14:25,262 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 6.36 sec
+2023-07-21 12:14:26,275 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 6.36 sec
+2023-07-21 12:14:27,289 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 6.36 sec
+2023-07-21 12:14:28,305 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 6.36 sec
+2023-07-21 12:14:29,321 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 6.36 sec
+2023-07-21 12:14:30,333 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 6.36 sec
+MapReduce Total cumulative CPU time: 6 seconds 360 msec
+Ended Job = job_202307210924_0012
+MapReduce Jobs Launched: 
+Job 0: Map: 2  Reduce: 1   Cumulative CPU: 6.36 sec   HDFS Read: 0 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 6 seconds 360 msec
+OK
+0	amount
+1	100
+2	150
+3	200
+4	120
+5	80
+Time taken: 53.346 seconds
+hive> create table homepage as select*from rajkumarclickstreamcsv where page = 'homepage';
+Total MapReduce jobs = 2
+Launching Job 1 out of 2
+Number of reduce tasks is set to 0 since there's no reduce operator
+Starting Job = job_202307210924_0013, Tracking URL = http://0.0.0.0:50030/jobdetails.jsp?jobid=job_202307210924_0013
+Kill Command = /usr/lib/hadoop/bin/hadoop job  -Dmapred.job.tracker=0.0.0.0:8021 -kill job_202307210924_0013
+Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 0
+2023-07-21 12:20:06,577 Stage-1 map = 0%,  reduce = 0%
+2023-07-21 12:20:21,724 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.63 sec
+2023-07-21 12:20:22,736 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.63 sec
+2023-07-21 12:20:23,755 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.63 sec
+2023-07-21 12:20:24,768 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.63 sec
+2023-07-21 12:20:25,778 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.63 sec
+2023-07-21 12:20:26,794 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.63 sec
+2023-07-21 12:20:27,810 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.63 sec
+2023-07-21 12:20:28,834 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.63 sec
+2023-07-21 12:20:29,845 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.63 sec
+2023-07-21 12:20:30,862 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.63 sec
+2023-07-21 12:20:31,874 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.63 sec
+2023-07-21 12:20:32,887 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.63 sec
+2023-07-21 12:20:33,899 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.63 sec
+2023-07-21 12:20:34,914 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.63 sec
+2023-07-21 12:20:35,939 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 1.63 sec
+MapReduce Total cumulative CPU time: 1 seconds 630 msec
+Ended Job = job_202307210924_0013
+Ended Job = 1915393203, job is filtered out (removed at runtime).
+Moving data to: hdfs://0.0.0.0:8020/tmp/hive-training/hive_2023-07-21_12-20-00_497_1019325451314455134/-ext-10001
+Moving data to: hdfs://0.0.0.0:8020/user/hive/warehouse/homepage
+5 Rows loaded to hdfs://0.0.0.0:8020/tmp/hive-training/hive_2023-07-21_12-20-00_497_1019325451314455134/-ext-10000
+MapReduce Jobs Launched: 
+Job 0: Map: 1   Cumulative CPU: 1.63 sec   HDFS Read: 0 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 1 seconds 630 msec
+OK
+Time taken: 35.563 seconds
+hive> select*from homepage;
+OK
+1	2023-01-01 10:00:00.0	homepage
+2	2023-01-01 10:02:00.0	homepage
+3	2023-01-01 10:05:00.0	homepage
+4	2023-01-01 10:09:00.0	homepage
+5	2023-01-01 10:15:00.0	homepage
+Time taken: 0.134 seconds
+hive> create table cartpage as select*drom rajkumarclickstream where page = 'cart_pag'; 
+FAILED: ParseException line 1:37 mismatched input 'rajkumarclickstream' expecting FROM near 'drom' in from clause
+
+hive> create table cartpage as select*drom rajkumarclickstream where page = 'cart_page';
+FAILED: ParseException line 1:37 mismatched input 'rajkumarclickstream' expecting FROM near 'drom' in from clause
+
+hive> create table cartpage as select*drom rajkumarclickstreamcsv where page = 'cart_page';
+FAILED: ParseException line 1:37 mismatched input 'rajkumarclickstreamcsv' expecting FROM near 'drom' in from clause
+
+hive> create table cartpage as select*from rajkumarclickstreamcsv where page = 'cart_page';
+Total MapReduce jobs = 2
+Launching Job 1 out of 2
+Number of reduce tasks is set to 0 since there's no reduce operator
+Starting Job = job_202307210924_0014, Tracking URL = http://0.0.0.0:50030/jobdetails.jsp?jobid=job_202307210924_0014
+Kill Command = /usr/lib/hadoop/bin/hadoop job  -Dmapred.job.tracker=0.0.0.0:8021 -kill job_202307210924_0014
+Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 0
+2023-07-21 12:23:31,299 Stage-1 map = 0%,  reduce = 0%
+2023-07-21 12:23:46,435 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.57 sec
+2023-07-21 12:23:47,443 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.57 sec
+2023-07-21 12:23:48,455 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.57 sec
+2023-07-21 12:23:49,461 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.57 sec
+2023-07-21 12:23:50,473 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.57 sec
+2023-07-21 12:23:51,485 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.57 sec
+2023-07-21 12:23:52,494 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.57 sec
+2023-07-21 12:23:53,504 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.57 sec
+2023-07-21 12:23:54,518 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.57 sec
+2023-07-21 12:23:55,532 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.57 sec
+2023-07-21 12:23:56,545 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.57 sec
+2023-07-21 12:23:57,555 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.57 sec
+2023-07-21 12:23:58,562 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.57 sec
+2023-07-21 12:23:59,575 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.57 sec
+2023-07-21 12:24:00,586 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 1.57 sec
+MapReduce Total cumulative CPU time: 1 seconds 570 msec
+Ended Job = job_202307210924_0014
+Ended Job = 1333476065, job is filtered out (removed at runtime).
+Moving data to: hdfs://0.0.0.0:8020/tmp/hive-training/hive_2023-07-21_12-23-25_693_2883125789757555404/-ext-10001
+Moving data to: hdfs://0.0.0.0:8020/user/hive/warehouse/cartpage
+3 Rows loaded to hdfs://0.0.0.0:8020/tmp/hive-training/hive_2023-07-21_12-23-25_693_2883125789757555404/-ext-10000
+MapReduce Jobs Launched: 
+Job 0: Map: 1   Cumulative CPU: 1.57 sec   HDFS Read: 0 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 1 seconds 570 msec
+OK
+Time taken: 35.015 seconds
+hive> select*from cartpage;                                                                
+OK
+2	2023-01-01 10:03:00.0	cart_page
+3	2023-01-01 10:07:00.0	cart_page
+4	2023-01-01 10:11:00.0	cart_page
+Time taken: 0.117 seconds
+hive> create table productpage as select*from rajkumarclickstreamcsv where page = 'product_page';
+Total MapReduce jobs = 2
+Launching Job 1 out of 2
+Number of reduce tasks is set to 0 since there's no reduce operator
+Starting Job = job_202307210924_0015, Tracking URL = http://0.0.0.0:50030/jobdetails.jsp?jobid=job_202307210924_0015
+Kill Command = /usr/lib/hadoop/bin/hadoop job  -Dmapred.job.tracker=0.0.0.0:8021 -kill job_202307210924_0015
+Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 0
+2023-07-21 12:26:21,730 Stage-1 map = 0%,  reduce = 0%
+2023-07-21 12:26:36,891 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.56 sec
+2023-07-21 12:26:37,902 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.56 sec
+2023-07-21 12:26:38,916 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.56 sec
+2023-07-21 12:26:39,925 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.56 sec
+2023-07-21 12:26:40,940 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.56 sec
+2023-07-21 12:26:41,950 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.56 sec
+2023-07-21 12:26:42,961 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.56 sec
+2023-07-21 12:26:43,973 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.56 sec
+2023-07-21 12:26:44,985 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.56 sec
+2023-07-21 12:26:45,994 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.56 sec
+2023-07-21 12:26:47,004 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.56 sec
+2023-07-21 12:26:48,011 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.56 sec
+2023-07-21 12:26:49,018 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.56 sec
+2023-07-21 12:26:50,026 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.56 sec
+2023-07-21 12:26:51,039 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 1.56 sec
+MapReduce Total cumulative CPU time: 1 seconds 560 msec
+Ended Job = job_202307210924_0015
+Ended Job = 2125511540, job is filtered out (removed at runtime).
+Moving data to: hdfs://0.0.0.0:8020/tmp/hive-training/hive_2023-07-21_12-26-16_148_428441167975021421/-ext-10001
+Moving data to: hdfs://0.0.0.0:8020/user/hive/warehouse/productpage
+4 Rows loaded to hdfs://0.0.0.0:8020/tmp/hive-training/hive_2023-07-21_12-26-16_148_428441167975021421/-ext-10000
+MapReduce Jobs Launched: 
+Job 0: Map: 1   Cumulative CPU: 1.56 sec   HDFS Read: 0 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 1 seconds 560 msec
+OK
+Time taken: 35.039 seconds
+hive> select*from productpage;                                                                   
+OK
+1	2023-01-01 10:01:00.0	product_page
+3	2023-01-01 10:06:00.0	product_page
+4	2023-01-01 10:10:00.0	product_page
+5	2023-01-01 10:16:00.0	product_page
+Time taken: 0.117 seconds
+hive> select sum(amount) from rajkumarpurchasecsv;
+Total MapReduce jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapred.reduce.tasks=<number>
+Starting Job = job_202307210924_0016, Tracking URL = http://0.0.0.0:50030/jobdetails.jsp?jobid=job_202307210924_0016
+Kill Command = /usr/lib/hadoop/bin/hadoop job  -Dmapred.job.tracker=0.0.0.0:8021 -kill job_202307210924_0016
+Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 1
+2023-07-21 12:27:48,406 Stage-1 map = 0%,  reduce = 0%
+2023-07-21 12:28:03,562 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.47 sec
+2023-07-21 12:28:04,574 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.47 sec
+2023-07-21 12:28:05,581 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.47 sec
+2023-07-21 12:28:06,595 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.47 sec
+2023-07-21 12:28:07,613 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.47 sec
+2023-07-21 12:28:08,624 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.47 sec
+2023-07-21 12:28:09,632 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.47 sec
+2023-07-21 12:28:10,642 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.47 sec
+2023-07-21 12:28:11,661 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.47 sec
+2023-07-21 12:28:12,673 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.47 sec
+2023-07-21 12:28:13,689 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 1.47 sec
+2023-07-21 12:28:14,703 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 1.47 sec
+2023-07-21 12:28:15,711 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 1.47 sec
+2023-07-21 12:28:16,725 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 1.47 sec
+2023-07-21 12:28:17,734 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 1.47 sec
+2023-07-21 12:28:18,743 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 1.47 sec
+2023-07-21 12:28:19,760 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.26 sec
+2023-07-21 12:28:20,766 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.26 sec
+2023-07-21 12:28:21,772 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.26 sec
+2023-07-21 12:28:22,779 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.26 sec
+2023-07-21 12:28:23,798 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.26 sec
+2023-07-21 12:28:24,805 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.26 sec
+2023-07-21 12:28:25,816 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.26 sec
+2023-07-21 12:28:26,828 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.26 sec
+2023-07-21 12:28:27,842 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.26 sec
+2023-07-21 12:28:28,855 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.26 sec
+2023-07-21 12:28:29,877 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.26 sec
+2023-07-21 12:28:30,895 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.26 sec
+2023-07-21 12:28:31,909 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.26 sec
+2023-07-21 12:28:32,922 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.26 sec
+2023-07-21 12:28:33,940 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.26 sec
+MapReduce Total cumulative CPU time: 4 seconds 260 msec
+Ended Job = job_202307210924_0016
+MapReduce Jobs Launched: 
+Job 0: Map: 1  Reduce: 1   Cumulative CPU: 4.26 sec   HDFS Read: 0 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 4 seconds 260 msec
+OK
+650.0
+Time taken: 51.233 seconds
+hive> select max(amount) from rajkumarpurchasecsv;
+Total MapReduce jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapred.reduce.tasks=<number>
+Starting Job = job_202307210924_0017, Tracking URL = http://0.0.0.0:50030/jobdetails.jsp?jobid=job_202307210924_0017
+Kill Command = /usr/lib/hadoop/bin/hadoop job  -Dmapred.job.tracker=0.0.0.0:8021 -kill job_202307210924_0017
+Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 1
+2023-07-21 12:28:51,439 Stage-1 map = 0%,  reduce = 0%
+2023-07-21 12:29:07,564 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.5 sec
+2023-07-21 12:29:08,585 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.5 sec
+2023-07-21 12:29:09,591 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.5 sec
+2023-07-21 12:29:10,597 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.5 sec
+2023-07-21 12:29:11,605 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.5 sec
+2023-07-21 12:29:12,619 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.5 sec
+2023-07-21 12:29:13,633 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.5 sec
+2023-07-21 12:29:14,642 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.5 sec
+2023-07-21 12:29:15,650 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.5 sec
+2023-07-21 12:29:16,660 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.5 sec
+2023-07-21 12:29:17,670 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 1.5 sec
+2023-07-21 12:29:18,680 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 1.5 sec
+2023-07-21 12:29:19,691 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 1.5 sec
+2023-07-21 12:29:20,700 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 3.55 sec
+2023-07-21 12:29:21,714 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 3.55 sec
+2023-07-21 12:29:22,723 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.2 sec
+2023-07-21 12:29:23,736 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.2 sec
+2023-07-21 12:29:24,743 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.2 sec
+2023-07-21 12:29:25,749 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.2 sec
+2023-07-21 12:29:26,763 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.2 sec
+2023-07-21 12:29:27,772 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.2 sec
+2023-07-21 12:29:28,784 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.2 sec
+2023-07-21 12:29:29,794 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.2 sec
+2023-07-21 12:29:30,809 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.2 sec
+2023-07-21 12:29:31,827 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.2 sec
+2023-07-21 12:29:32,836 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.2 sec
+2023-07-21 12:29:33,854 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.2 sec
+2023-07-21 12:29:34,862 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.2 sec
+2023-07-21 12:29:35,877 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.2 sec
+2023-07-21 12:29:36,895 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.2 sec
+MapReduce Total cumulative CPU time: 4 seconds 200 msec
+Ended Job = job_202307210924_0017
+MapReduce Jobs Launched: 
+Job 0: Map: 1  Reduce: 1   Cumulative CPU: 4.2 sec   HDFS Read: 0 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 4 seconds 200 msec
+OK
+amount
+Time taken: 51.114 seconds
+hive> select min(amount) from rajkumarpurchasecsv;
+Total MapReduce jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapred.reduce.tasks=<number>
+Starting Job = job_202307210924_0018, Tracking URL = http://0.0.0.0:50030/jobdetails.jsp?jobid=job_202307210924_0018
+Kill Command = /usr/lib/hadoop/bin/hadoop job  -Dmapred.job.tracker=0.0.0.0:8021 -kill job_202307210924_0018
+Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 1
+2023-07-21 12:30:07,637 Stage-1 map = 0%,  reduce = 0%
+2023-07-21 12:30:22,753 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.51 sec
+2023-07-21 12:30:23,759 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.51 sec
+2023-07-21 12:30:24,766 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.51 sec
+2023-07-21 12:30:25,772 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.51 sec
+2023-07-21 12:30:26,781 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.51 sec
+2023-07-21 12:30:27,793 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.51 sec
+2023-07-21 12:30:28,802 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.51 sec
+2023-07-21 12:30:29,821 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.51 sec
+2023-07-21 12:30:30,835 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.51 sec
+2023-07-21 12:30:31,849 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.51 sec
+2023-07-21 12:30:32,859 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 1.51 sec
+2023-07-21 12:30:33,874 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 1.51 sec
+2023-07-21 12:30:34,888 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 1.51 sec
+2023-07-21 12:30:35,904 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 1.51 sec
+2023-07-21 12:30:36,917 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 1.51 sec
+2023-07-21 12:30:37,925 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 1.51 sec
+2023-07-21 12:30:38,933 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.27 sec
+2023-07-21 12:30:39,945 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.27 sec
+2023-07-21 12:30:40,958 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.27 sec
+2023-07-21 12:30:41,964 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.27 sec
+2023-07-21 12:30:42,979 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.27 sec
+2023-07-21 12:30:43,986 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.27 sec
+2023-07-21 12:30:44,998 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.27 sec
+2023-07-21 12:30:46,013 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.27 sec
+2023-07-21 12:30:47,021 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.27 sec
+2023-07-21 12:30:48,038 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.27 sec
+2023-07-21 12:30:49,045 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.27 sec
+2023-07-21 12:30:50,055 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.27 sec
+2023-07-21 12:30:51,062 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.27 sec
+2023-07-21 12:30:52,071 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.27 sec
+2023-07-21 12:30:53,535 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 4.27 sec
+MapReduce Total cumulative CPU time: 4 seconds 270 msec
+Ended Job = job_202307210924_0018
+MapReduce Jobs Launched: 
+Job 0: Map: 1  Reduce: 1   Cumulative CPU: 4.27 sec   HDFS Read: 0 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 4 seconds 270 msec
+OK
+100
+Time taken: 51.571 seconds
+hive> 
